@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import  TextField from "@mui/material/TextField";
+import Button  from "@mui/material/Button";
 function App() {
     const [name, setName] = React.useState('');
     const [age, setAge] = React.useState('0');
@@ -14,8 +15,13 @@ function App() {
         <div>
             <h1>Hello World!</h1>
             <h1>{ name } - { age }</h1>
-            <input onChange={onChange} placeholder="Enter Name"/>
+            <TextField 
+                value={name}
+                variant="filled"
+                onChange={onChange} 
+                placeholder="Enter Name"/>
             <input onChange={onAgeChange} placeholder="Enter Age" />
+            <Button variant="contained">Submit</Button>
         </div>
     )
 }
